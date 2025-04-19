@@ -10,10 +10,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "run-p add-version type-check build-only",
-    "add-version": "node ./add-frontend-version.js",
+    "build": "vite build",
     "preview": "vite preview",
-    "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
