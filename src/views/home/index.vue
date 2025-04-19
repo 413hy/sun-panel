@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { VueDraggable } from 'vue-draggable-plus'
+// 移除下面这行引用
+// import { VueDraggable } from 'vue-draggable-plus'
 import { NBackTop, NButton, NButtonGroup, NDropdown, NModal, NSkeleton, NSpin, useDialog, useMessage } from 'naive-ui'
 import { nextTick, onMounted, ref } from 'vue'
 import { AppIcon, AppStarter, EditItem } from './components'
