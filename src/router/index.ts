@@ -1,18 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import type { App } from 'vue'
-import { Layout } from '@/layout/index'
+import Layout from '@/layout/index.vue'
 
-const router = createRouter({
+export const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: '/',
-      name: 'Root',
       component: Layout,
-      redirect: '/home',
       children: [
         {
-          path: '/home',
+          path: '',
           name: 'Home',
           component: () => import('@/views/home/index.vue')
         }
@@ -21,8 +19,7 @@ const router = createRouter({
   ]
 })
 
-export function setupRouter(app: App) {
+export async function setupRouter(app: App) {
   app.use(router)
+  await router.isReady()
 }
-
-export default router
