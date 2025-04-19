@@ -24,7 +24,9 @@ export default defineConfig({
           'vue-vendor': ['vue', 'vue-router', 'pinia'],
           'ui-vendor': ['naive-ui'],
         }
-      }
+      },
+      // 添加 moment 到外部依赖
+      external: ['moment']
     },
     terserOptions: {
       compress: {
