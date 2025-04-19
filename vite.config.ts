@@ -25,8 +25,11 @@ export default defineConfig({
           'ui-vendor': ['naive-ui'],
         }
       },
-      // 添加以下配置，明确排除虚拟模块
-      external: ['virtual:svg-icons-register']
+      // 添加以下配置，明确排除虚拟模块和katex
+      external: [
+        'virtual:svg-icons-register',
+        'katex/dist/katex.min.css'
+      ]
     },
     terserOptions: {
       compress: {
