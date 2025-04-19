@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vueuse/core": "9.13.0",
+    "moment": "^2.30.1",
     "naive-ui": "2.34.3",
     "pinia": "2.0.35",
     "vue": "3.2.47",
