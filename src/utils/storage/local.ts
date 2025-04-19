@@ -8,5 +8,11 @@ export function createLocalStorage() {
     return json ? JSON.parse(json) : null
   }
 
-  return { set, get }
+  function remove(key: string) {
+    window.localStorage.removeItem(key)
+  }
+
+  return { set, get, remove }
 }
+
+export const ss = createLocalStorage()
