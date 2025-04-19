@@ -4,7 +4,7 @@ import { setupI18n } from './locales'
 import { setupAssets, setupScrollbarStyle } from './plugins'
 import { setupStore } from './store'
 import { setupRouter } from './router'
-import 'virtual:svg-icons-register' // svg图标注册
+// 删除 import 'virtual:svg-icons-register' 这一行
 
 async function bootstrap() {
   const app = createApp(App)

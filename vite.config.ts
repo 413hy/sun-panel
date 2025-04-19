@@ -18,14 +18,15 @@ export default defineConfig({
     outDir: 'dist',
     minify: 'terser',
     chunkSizeWarningLimit: 1500,
-    // Add these settings for better performance
     rollupOptions: {
       output: {
         manualChunks: {
           'vue-vendor': ['vue', 'vue-router', 'pinia'],
           'ui-vendor': ['naive-ui'],
         }
-      }
+      },
+      // 添加以下配置，明确排除虚拟模块
+      external: ['virtual:svg-icons-register']
     },
     terserOptions: {
       compress: {
