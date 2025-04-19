@@ -3,31 +3,23 @@ import { ss } from '@/utils/storage'
 
 const LOCAL_NAME = 'AUTH_TOKEN'
 
-// export function getToken() {
-//   return ss.get(LOCAL_NAME)
-// }
-
-// export function setToken(token: string) {
-//   return ss.set(LOCAL_NAME, token)
-// }
-
-// export function setUserInfo(userInfo: User.Info) {
-//   return ss.set(LOCAL_NAME, userInfo)
-// }
-
-// export function getUserInfo() {
-//   return ss.get(LOCAL_NAME)
-// }
-
 export function setStorage(state: AuthState) {
   return ss.set(LOCAL_NAME, state)
 }
 
+// 默认登录状态
 export function getStorage() {
-  return ss.get(LOCAL_NAME)
+  return {
+    token: 'default-token',
+    user: {
+      username: 'visitor',
+      role: 1,
+      name: 'Visitor',
+    },
+    visitMode: 1
+  }
 }
 
 export function removeToken() {
-  // ss.clear()
   return ss.remove(LOCAL_NAME)
 }

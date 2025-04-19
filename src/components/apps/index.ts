@@ -13,3 +13,14 @@ export {
   UserInfo,
   Users,
 }
+
+
+import About from './About/index.vue'
+import Style from './Style/index.vue'
+import ItemGroupManage from './ItemGroupManage/index.vue'
+
+export {
+  About,
+  Style,
+  ItemGroupManage,
+}
